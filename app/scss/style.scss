@@ -1,8 +1,6 @@
-.menu {
-  display: flex;
-  justify-content: space-around;
+@import 'vars';
+@import 'fonts';
+@import 'reset';
+@import 'global';
 
-  &__dd {
-    padding: 0;
-  }
-}
+@import 'media';
