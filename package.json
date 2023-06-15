@@ -1,9 +1,11 @@
 {
-  "name": "simple-food",
   "version": "0.0.0",
-  "main": "index.js",
+  "name": "simple-food",
+  "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "predeploy": "gulp build",
+    "deploy": "gh-pages -d dist"
   },
   "author": "Serhii Dotsenko",
   "license": "ISC",
@@ -17,6 +19,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "gh-pages": "^5.0.0"
   }
 }
