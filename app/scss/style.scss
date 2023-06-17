@@ -57,4 +57,100 @@
   }
 }
 
+footer {
+  background-color: $silver-100;
+}
+
+.footer-top {
+  padding-bottom: 60px;
+  padding-right: 70px;
+  border-bottom: 1px solid #ececec;
+  display: flex;
+  gap: 70px;
+  &__link,
+  &__contact {
+    display: block;
+  }
+  &__contact {
+    padding-bottom: 15px;
+  }
+  &__link {
+    width: max-content;
+    padding-bottom: 20px;
+  }
+  &__social-list {
+    display: flex;
+    gap: 13px;
+  }
+  &__item .logo .logo__img {
+    margin-bottom: 30px;
+  }
+  &__form-input {
+    padding: 13px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    width: 200px;
+    &::placeholder {
+      font-size: 14px;
+      color: $gray;
+    }
+  }
+  &__form-btn {
+    background-color: $orange-900;
+    border-radius: 5px;
+    padding: 13px 0 13px 40px;
+    color: #fff;
+    width: 200px;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 14px;
+      left: 38px;
+      width: 17px;
+      height: 16px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-image: url('../images/icons/telegram.svg');
+    }
+  }
+  &__contact {
+    position: relative;
+    padding-left: 30px;
+  }
+  &__contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  &__contact--address::before {
+    background-image: url('../images/icons/address.svg');
+  }
+  &__contact--phone::before {
+    background-image: url('../images/icons/phone.svg');
+  }
+  &__contact--email::before {
+    background-image: url('../images/icons/email.svg');
+  }
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 30px 0;
+  &__version {
+    float: right;
+    color: $gray;
+  }
+}
+
 @import 'media';
