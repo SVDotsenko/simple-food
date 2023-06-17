@@ -3,9 +3,11 @@ const scss = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const autoprefixer = require('gulp-autoprefixer');
 const uglify = require('gulp-uglify');
-const browserSync = require('browser-sync').create();
 const imagemin = require('gulp-imagemin');
+const injectString = require('gulp-inject-string');
+const browserSync = require('browser-sync').create();
 const del = require('del');
+const fs = require('fs');
 
 function browsersync() {
   browserSync.init({
@@ -74,11 +76,19 @@ function watching() {
   watch(['app/**/*.html']).on('change', browserSync.reload);
 }
 
+function updateVersion() {
+  const version = JSON.parse(fs.readFileSync('package.json', 'utf8')).version;
+  return src('app/index.html')
+    .pipe(injectString.replace(/(\d+)\.(\d+)\.(\d+)/, version))
+    .pipe(dest('app'));
+}
+
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
 exports.watching = watching;
 exports.images = images;
 exports.cleanDist = cleanDist;
-exports.build = series(cleanDist, images, build);
+exports.updateVersion = updateVersion;
+exports.build = series(cleanDist, images, updateVersion, build);
 exports.default = parallel(styles, scripts, browsersync, watching);

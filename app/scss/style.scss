@@ -3,4 +3,58 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 60px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__nav {
+    display: flex;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex;
+  }
+  &__list-item:not(:last-child) {
+    margin-right: 45px;
+    font-size: 18px;
+  }
+  &__list-item:last-child {
+    margin-right: 63px;
+  }
+  &__list-link {
+    color: $dark;
+    &--active {
+      color: $orange-900;
+    }
+  }
+}
+
+.user-nav {
+  display: flex;
+  &__link {
+    position: relative;
+  }
+  &__link:not(:last-child) {
+    margin-right: 25px;
+  }
+  &__num {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: $orange-900;
+    top: -6px;
+    right: -6px;
+    font-size: 10px;
+    color: $white;
+    text-align: center;
+    line-height: 14px;
+  }
+}
+
 @import 'media';

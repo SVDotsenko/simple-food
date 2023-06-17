@@ -2,14 +2,47 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Food</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <h1>hello work</h1>
+  <header class="header">
+    <div class="container">
+      <div class="header__inner">
+        <a class="logo" href="#">
+          <img class="logo__img" src="images/icons/logo.svg" alt="logo">
+        </a>
+        <div class="header__nav">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a class="menu__list-link menu__list-link--active" href="#">Главная</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Блюда</a>
+              </li>
+              <li class="menu__list-item">
+                <a class="menu__list-link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="user-nav">
+            <a class="user-nav__link" href="#">
+              <img class="user-nav__link-img" src="images/icons/search.svg" alt="user icon">
+            </a>
+            <a class="user-nav__link" href="#">
+              <img class="user-nav__link-img" src="images/icons/cart.svg" alt="user icon">
+              <span class="user-nav__num">4</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
   <script src="js/main.min.js"></script>
 </body>
 </html>
+
+<!--0.0.0-->

@@ -1,0 +1,13 @@
+@import 'vars';
+
+body {
+  //color: $silver-100;
+  font-size: 20px;
+  @extend %rubikRegular-400;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
