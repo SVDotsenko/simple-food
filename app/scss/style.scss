@@ -57,7 +57,38 @@
   }
 }
 
-footer {
+.delivery .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 120px;
+}
+
+.delivery {
+  &__header {
+    font-size: 66px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__time {
+    display: block;
+    color: $orange-900;
+  }
+  &__description {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: 400;
+  }
+  &__btn {
+    margin-right: 34px;
+  }
+  &__promise {
+    max-width: 450px;
+  }
+}
+
+.footer {
   background-color: $silver-100;
 }
 
