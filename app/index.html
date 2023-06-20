@@ -17,13 +17,13 @@
           <nav class="menu">
             <ul class="menu__list">
               <li class="menu__list-item">
-                <a class="menu__list-link menu__list-link--active" href="#">Главная</a>
+                <a class="animation menu__list-link menu__list-link--active" href="#">Главная</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Блюда</a>
+                <a class="animation menu__list-link" href="#">Блюда</a>
               </li>
               <li class="menu__list-item">
-                <a class="menu__list-link" href="#">Контакты</a>
+                <a class="animation menu__list-link" href="#">Контакты</a>
               </li>
             </ul>
           </nav>
@@ -57,6 +57,108 @@
         <img class="header__courier" src="images/scooter-guy.jpg" alt="курьер">
       </div>
     </section>
+
+    <section class="popular-categories section">
+      <div class="container">
+        <h2 class="popular-categories__header">Популярные категории </h2>
+        <ul class="popular-categories__buttons">
+          <li>
+            <button class="button-burger" data-filter=".burger" type="button">
+              <img src="images/icons/burgers/burger.svg" alt="бургер">
+              <span>Бургеры</span>
+            </button>
+          </li>
+          <li>
+            <button class="button-burger" data-filter=".pizza" type="button">
+              <img src="images/icons/burgers/pizza.svg" alt="бургер">
+              <span>Пицца</span>
+            </button>
+          </li>
+          <li>
+            <button class="button-burger" data-filter=".sandwich" type="button">
+              <img src="images/icons/burgers/sandwich.svg" alt="бургер">
+              <span>Сендвичи</span>
+            </button>
+          </li>
+          <li>
+            <button class="button-burger" data-filter=".asia" type="button">
+              <img src="images/icons/burgers/asia.svg" alt="бургер">
+              <span>Азиатская кухня</span>
+            </button>
+          </li>
+          <li>
+            <button class="button-burger" data-filter=".set" type="button">
+              <img src="images/icons/burgers/set.svg" alt="бургер">
+              <span>Сеты</span>
+            </button>
+          </li>
+        </ul>
+
+        <ul class="popular-categories__content">
+          <li class="popular-categories__item mix burger">
+            <img class="popular-categories__img" src="images/burgers/cheese.jpg" alt="Чизбургер с листьями салата">
+            <p class="popular-categories__name">Чизбургер с листьями салата</p>
+            <p class="popular-categories__price">160 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix pizza">
+            <img class="popular-categories__img" src="images/burgers/beef.jpg" alt="Бифбургер">
+            <p class="popular-categories__name">Бифбургер</p>
+            <p class="popular-categories__price">190 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix sandwich">
+            <img class="popular-categories__img" src="images/burgers/queen.jpg" alt="Королевский чизбургер">
+            <p class="popular-categories__name">Королевский чизбургер</p>
+            <p class="popular-categories__price">260 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix asia">
+            <img class="popular-categories__img" src="images/burgers/black.jpg" alt="Черный гамбургер">
+            <p class="popular-categories__name">Черный гамбургер</p>
+            <p class="popular-categories__price">199 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix set">
+            <img class="popular-categories__img" src="images/burgers/chicken.jpg" alt="Чикен бургер">
+            <p class="popular-categories__name">Чикен бургер</p>
+            <p class="popular-categories__price">180 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix burger">
+            <img class="popular-categories__img" src="images/burgers/cheese.jpg" alt="Чизбургер с листьями салата">
+            <p class="popular-categories__name">Чизбургер с листьями салата</p>
+            <p class="popular-categories__price">160 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix pizza">
+            <img class="popular-categories__img" src="images/burgers/beef.jpg" alt="Бифбургер">
+            <p class="popular-categories__name">Бифбургер</p>
+            <p class="popular-categories__price">190 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix sandwich">
+            <img class="popular-categories__img" src="images/burgers/queen.jpg" alt="Королевский чизбургер">
+            <p class="popular-categories__name">Королевский чизбургер</p>
+            <p class="popular-categories__price">260 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix asia">
+            <img class="popular-categories__img" src="images/burgers/black.jpg" alt="Черный гамбургер">
+            <p class="popular-categories__name">Черный гамбургер</p>
+            <p class="popular-categories__price">199 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+          <li class="popular-categories__item mix set">
+            <img class="popular-categories__img" src="images/burgers/chicken.jpg" alt="Чикен бургер">
+            <p class="popular-categories__name">Чикен бургер</p>
+            <p class="popular-categories__price">180 грн.</p>
+            <button class="button">В корзину</button>
+          </li>
+        </ul>
+        <a class="hyperlink" href="#" data-filter="all">Показать ещё</a>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
@@ -69,7 +171,7 @@
           </a>
           <form class="footer-top__form" action="#">
             <input class="footer-top__form-input" type="email" placeholder="Ваш email" required>
-            <button class="footer-top__form-btn" type="submit">Подписаться</button>
+            <button class="footer-top__form-btn button" type="submit">Подписаться</button>
           </form>
         </div>
 

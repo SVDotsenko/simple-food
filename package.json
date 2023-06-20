@@ -1,12 +1,12 @@
 {
-  "version": "12.3.0",
+  "version": "12.4.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"12.3.0 Delivery\""
+    "gitHub": "npm run deploy -- -m \"12.4.0 Popular categories\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
@@ -20,6 +20,7 @@
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
     "jquery": "^3.7.0",
-    "sass": "^1.63.4"
+    "sass": "^1.63.4",
+    "mixitup": "^3.3.1"
   }
 }
