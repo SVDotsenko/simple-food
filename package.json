@@ -1,12 +1,12 @@
 {
-  "version": "12.5.0",
+  "version": "12.6.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"12.5.0 Uppercase, icons inserted in html as code\""
+    "gitHub": "npm run deploy -- -m \"12.6.0 refactoring after codereview\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",

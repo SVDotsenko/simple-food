@@ -1,0 +1,35 @@
+@mixin font-face($font-family, $url, $weight, $font-style) {
+  @font-face {
+    font-family: $font-family;
+    src: url('../fonts/#{$url}.woff2') format('woff2'), url('../fonts/#{$url}.woff') format('woff');
+    font-weight: $weight;
+    font-style: $font-style;
+    font-display: swap;
+  }
+}
+
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+  content: $content;
+  display: $display;
+  position: $pos;
+}
+
+@mixin pseudo_image_position($repeat: no-repeat, $position: center, $size:cover) {
+  background-repeat: $repeat;
+  background-position: $position;
+  background-size: $size;
+}
+
+@mixin line-clamp($lines: 1) {
+  @if $lines <=1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  } @else {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
