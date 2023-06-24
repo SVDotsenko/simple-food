@@ -1,12 +1,12 @@
 {
-  "version": "13.3.0",
+  "version": "13.4.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"13.3.0 styling icon inside the button\""
+    "gitHub": "npm run deploy -- -m \"13.4.0 styling social network icons\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",

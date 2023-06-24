@@ -185,4 +185,30 @@ body {
 .social-list {
   display: flex;
   gap: 13px;
+
+  &__social {
+    &-img {
+      width: 39px;
+      height: 39px;
+      stroke: $dark;
+      fill: $silver-200;
+      border-radius: 50%;
+      transition: all 0.3s;
+
+      &:focus {
+        fill: $silver-200;
+        stroke: $orange-900;
+      }
+
+      &:hover {
+        fill: $orange-900;
+        stroke: #fff;
+      }
+
+      &:active {
+        fill: #FFF2ED;
+        stroke: $orange-900;
+      }
+    }
+  }
 }
