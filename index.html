@@ -30,12 +30,16 @@
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <img class="user-nav__link-img" src="images/icons/search.svg" alt="user icon">
+                <svg class="user-nav__link-img">
+                  <use xlink:href="images/sprite.svg#search"></use>
+                </svg>
               </a>
             </li>
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
-                <img class="user-nav__link-img" src="images/icons/cart.svg" alt="user icon">
+                <svg class="user-nav__link-img">
+                  <use xlink:href="images/sprite.svg#cart"></use>
+                </svg>
                 <span class="user-nav__num">4</span>
               </a>
             </li>
@@ -70,31 +74,41 @@
         <ul class="popular-categories__buttons">
           <li>
             <button class="button-burger" data-filter="all" type="button">
-              <img src="images/burgers/svg/burger.svg" alt="бургер">
+              <svg class="button-burger__img">
+                <use xlink:href="images/sprite.svg#burger"></use>
+              </svg>
               <span>Бургеры</span>
             </button>
           </li>
           <li>
             <button class="button-burger" data-filter=".pizza" type="button">
-              <img src="images/burgers/svg/pizza.svg" alt="бургер">
+              <svg class="button-burger__img">
+                <use xlink:href="images/sprite.svg#pizza"></use>
+              </svg>
               <span>Пицца</span>
             </button>
           </li>
           <li>
             <button class="button-burger" data-filter=".sandwich" type="button">
-              <img src="images/burgers/svg/sandwich.svg" alt="бургер">
+              <svg class="button-burger__img">
+                <use xlink:href="images/sprite.svg#sandwich"></use>
+              </svg>
               <span>Сендвичи</span>
             </button>
           </li>
           <li>
             <button class="button-burger" data-filter=".asia" type="button">
-              <img src="images/burgers/svg/asia.svg" alt="бургер">
+              <svg class="button-burger__img">
+                <use xlink:href="images/sprite.svg#asia"></use>
+              </svg>
               <span>Азиатская кухня</span>
             </button>
           </li>
           <li>
             <button class="button-burger" data-filter=".set" type="button">
-              <img src="images/burgers/svg/set.svg" alt="бургер">
+              <svg class="button-burger__img">
+                <use xlink:href="images/sprite.svg#set"></use>
+              </svg>
               <span>Сеты</span>
             </button>
           </li>
@@ -103,7 +117,7 @@
         <ul class="popular-categories__content">
           <li class="mix burger">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/cheese.png"
+              <img class="product-card__img" src="images/cheese.png"
                 alt="Чизбургер с листьями салата">
               <span class="product-card__name">Чизбургер с листьями салата</span>
               <span class="product-card__price">160 <span class="currency">грн.</span></span>
@@ -112,7 +126,7 @@
           </li>
           <li class="mix pizza">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/beef.png" alt="Бифбургер">
+              <img class="product-card__img" src="images/beef.png" alt="Бифбургер">
               <span class="product-card__name">Бифбургер</span>
               <span class="product-card__price">190 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -120,7 +134,7 @@
           </li>
           <li class="mix sandwich">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/queen.png" alt="Королевский чизбургер">
+              <img class="product-card__img" src="images/queen.png" alt="Королевский чизбургер">
               <span class="product-card__name">Королевский чизбургер</span>
               <span class="product-card__price">260 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -128,7 +142,7 @@
           </li>
           <li class="mix asia">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/black.png" alt="Черный гамбургер">
+              <img class="product-card__img" src="images/black.png" alt="Черный гамбургер">
               <span class="product-card__name">Черный гамбургер</span>
               <span class="product-card__price">199 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -136,7 +150,7 @@
           </li>
           <li class="mix set">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/chicken.png" alt="Чикен бургер">
+              <img class="product-card__img" src="images/chicken.png" alt="Чикен бургер">
               <span class="product-card__name">Чикен бургер</span>
               <span class="product-card__price">180 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -144,7 +158,7 @@
           </li>
           <li class="mix burger">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/cheese.png" alt="Чизбургер с листьями салата">
+              <img class="product-card__img" src="images/cheese.png" alt="Чизбургер с листьями салата">
               <span class="product-card__name">Чизбургер с листьями салата</span>
               <span class="product-card__price">160 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -152,7 +166,7 @@
           </li>
           <li class="mix pizza">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/beef.png" alt="Бифбургер">
+              <img class="product-card__img" src="images/beef.png" alt="Бифбургер">
               <span class="product-card__name">Бифбургер</span>
               <span class="product-card__price">190 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -160,7 +174,7 @@
           </li>
           <li class="mix sandwich">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/queen.png" alt="Королевский чизбургер">
+              <img class="product-card__img" src="images/queen.png" alt="Королевский чизбургер">
               <span class="product-card__name">Королевский чизбургер</span>
               <span class="product-card__price">260 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -168,7 +182,7 @@
           </li>
           <li class="mix asia">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/black.png" alt="Черный гамбургер">
+              <img class="product-card__img" src="images/black.png" alt="Черный гамбургер">
               <span class="product-card__name">Черный гамбургер</span>
               <span class="product-card__price">199 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -176,7 +190,7 @@
           </li>
           <li class="mix set">
             <article class="product-card">
-              <img class="product-card__img" src="images/burgers/png/chicken.png" alt="Чикен бургер">
+              <img class="product-card__img" src="images/chicken.png" alt="Чикен бургер">
               <span class="product-card__name">Чикен бургер</span>
               <span class="product-card__price">180 <span class="currency">грн.</span></span>
               <button class="button" type="button">В корзину</button>
@@ -303,7 +317,7 @@
 
     <div class="footer-bottom">
       <span class="footer-bottom__copy">© 2022 Simple Food</span>
-      <span class="footer-bottom__version">13.0.0</span>
+      <span class="footer-bottom__version">13.2.0</span>
     </div>
 
   </footer>
