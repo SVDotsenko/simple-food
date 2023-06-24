@@ -1,12 +1,12 @@
 {
-  "version": "13.1.0",
+  "version": "13.2.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"13.1.0 setup sprite\""
+    "gitHub": "npm run deploy -- -m \"13.2.0 styling navigation & burgers icons\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
