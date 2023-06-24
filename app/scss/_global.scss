@@ -162,19 +162,22 @@ body {
   }
 
   &__button {
-    padding: 13px 0 13px 40px;
     width: 200px;
     font-size: 14px;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
 
-    &::before {
-      @include pseudo;
-      @include pseudo_image_position;
-      top: 14px;
-      left: 38px;
+    &:focus &-img,
+    &:hover &-img {
+      fill: $orange-900;
+    }
+
+    &-img {
       width: 17px;
       height: 16px;
-      background-image: url('../images/icons/telegram.svg');
+      fill: #fff;
     }
   }
 }
