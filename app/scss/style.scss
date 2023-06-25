@@ -331,6 +331,19 @@
   }
 }
 
+.customer-feedback {
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+  }
+
+  &__img {
+    border-radius: 50%;
+  }
+}
+
 .mobile-application {
   &__container {
     @extend .df-sb-aic;
