@@ -174,7 +174,7 @@
   &__content {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: minmax(300px, auto);
+    grid-template-rows: repeat(2, minmax(300px, auto));
     grid-gap: 30px;
     margin-bottom: 60px;
   }
@@ -319,6 +319,15 @@
         }
       }
     }
+  }
+}
+
+.best-restaurants {
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, minmax(419px, auto));
+    grid-gap: 30px;
   }
 }
 
