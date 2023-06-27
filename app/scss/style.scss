@@ -293,7 +293,6 @@
       position: relative;
 
       &::before {
-        @include pseudo;
         @include pseudo_image_position;
         top: 0;
         left: 0;
@@ -407,7 +406,6 @@
     padding-left: 30px;
 
     &::before {
-      @include pseudo;
       @include pseudo_image_position;
       top: 0;
       left: 0;

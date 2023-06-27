@@ -15,6 +15,7 @@
 }
 
 @mixin pseudo_image_position($repeat: no-repeat, $position: center, $size:cover) {
+  @include pseudo;
   background-repeat: $repeat;
   background-position: $position;
   background-size: $size;
