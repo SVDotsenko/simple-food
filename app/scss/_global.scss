@@ -52,7 +52,7 @@ body {
 }
 
 .button {
-  color: #fff;
+  color: $white;
   background-color: $orange-900;
   padding: 12px 32px;
   border-radius: 5px;
@@ -153,7 +153,7 @@ body {
     }
 
     &:focus {
-      background-color: #FFFFFF;
+      background-color: $white;
       color: $gray;
       box-shadow: 0 0 0 2px $orange-900;
       border-color: transparent;
@@ -181,7 +181,7 @@ body {
     &-img {
       width: 17px;
       height: 16px;
-      fill: #fff;
+      fill: $white;
     }
   }
 }
@@ -206,11 +206,11 @@ body {
 
       &:hover {
         fill: $orange-900;
-        stroke: #fff;
+        stroke: $white;
       }
 
       &:active {
-        fill: #FFF2ED;
+        fill: $silver-300;
         stroke: $orange-900;
       }
     }
@@ -219,7 +219,7 @@ body {
 
 .restaurant-card {
   border-radius: 10px;
-  background: #FFF;
+  background: $white;
   box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
   height: 100%;
 
@@ -263,21 +263,21 @@ body {
       width: 79px;
       height: 33px;
       fill: $orange-900;
-      stroke: #fff;
+      stroke: $white;
       transition: all 0.3s;
 
       &:focus {
-        fill: #FFF2ED;
+        fill: $silver-300;
         stroke: rgba(255, 104, 56, 0.70);
       }
 
       &:hover {
-        fill: #FFF;
+        fill: $white;
         stroke: rgba(255, 104, 56, 0.70);
       }
 
       &:active {
-        fill: #FFF2ED;
+        fill: $silver-300;
       }
     }
   }
@@ -379,12 +379,12 @@ body {
   }
 
   & .slick-dots button:hover {
-    background-color: #FFF2ED;
-    border: 2px solid #FFAE94;
+    background-color: $silver-300;
+    border: 2px solid $orange-700;
   }
 
   & .slick-dots button:active {
-    background-color: #FFAE94;
+    background-color: $orange-700;
     border: transparent;
   }
 
@@ -408,8 +408,8 @@ body {
     }
 
     &:hover {
-      background-color: #FFF2ED;
-      border-color: #FFAE94;
+      background-color: $silver-300;
+      border-color: $orange-700;
     }
 
     &:active {
@@ -418,11 +418,11 @@ body {
     }
 
     &:hover &-img {
-      fill: #FFAE94;
+      fill: $orange-700;
     }
 
     &:active &-img {
-      fill: #FF7A50;
+      fill: $orange-800;
     }
 
     &--prev {
