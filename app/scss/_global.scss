@@ -284,9 +284,18 @@ body {
 }
 
 .slider {
-  width: 650px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
 
   &__customer {
+    &-img {
+      border-radius: 50%;
+    }
+
     &-opinion {
       position: relative;
     }
@@ -356,13 +365,23 @@ body {
     outline: none;
   }
 
+  & .slick-dots .slick-active button {
+    background-color: $orange-900;
+  }
+
+  & .slick-dots button:focus {
+    background-color: $gray;
+    border: 2px solid $orange-900;
+  }
+
   & .slick-dots button:hover {
     background-color: #FFF2ED;
     border: 2px solid #FFAE94;
   }
 
-  & .slick-dots .slick-active button {
-    background-color: $orange-900;
+  & .slick-dots button:active {
+    background-color: #FFAE94;
+    border: transparent;
   }
 
   &__arrow {
@@ -381,8 +400,7 @@ body {
     }
 
     &:focus {
-      //background-color: rgba(purple, 0.9);
-      box-shadow: 0 0 6px 0 $orange-900;
+      box-shadow: 0 0 0 2px $orange-900;
     }
 
     &:hover {
@@ -390,17 +408,17 @@ body {
       border-color: #FFAE94;
     }
 
+    &:active {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
     &:hover &-img {
       fill: #FFAE94;
     }
 
-    //
-    //&:active {
-    //  box-shadow: inset 0 0 5px 0 rgba(purple, 0.5);
-    //}
-
-    &--prev {
-      //border-radius: 30px 0 0 30px;
+    &:active &-img {
+      fill: #FF7A50;
     }
 
     &--next {
@@ -414,6 +432,5 @@ body {
       display: grid;
       place-items: center;
     }
-
   }
 }
