@@ -3,10 +3,8 @@
 @import 'vars';
 @import 'global';
 @import 'mixins';
-
-.header {
-  padding-top: 60px;
-}
+@import 'components/header';
+@import 'page-catalog/delivery';
 
 .logo {
   transition: box-shadow 0.5s, opacity 0.5s;
@@ -23,145 +21,6 @@
 
   &:active {
     opacity: 0.5;
-  }
-}
-
-.menu {
-  @extend .df-sb-aic;
-
-  &__list {
-    display: flex;
-    align-items: center;
-    margin-right: 52px;
-  }
-
-  &__list-item {
-    &:not(:last-child) {
-      margin-right: 45px;
-    }
-  }
-
-  &__list-link {
-    &--active {
-      color: $orange-900;
-    }
-  }
-}
-
-.menu-right {
-  display: flex;
-}
-
-.user-nav {
-  display: flex;
-
-  &__link {
-    position: relative;
-    display: grid;
-    place-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 5px;
-    transition: all 0.3s;
-
-    &:focus {
-      background-color: rgba($orange-800, 0.1);
-      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
-    }
-
-    &:hover {
-      background: $orange-800;
-    }
-
-    &:active {
-      background: $silver-300;
-      box-shadow: none;
-    }
-
-    &:focus .user-nav__link-img {
-      stroke: $darkBlue-900;
-    }
-
-    &:hover .user-nav__link-img {
-      stroke: $white;
-    }
-
-    &:active .user-nav__link-img {
-      stroke: $darkBlue-900;
-    }
-
-    &:hover .user-nav__num {
-      color: $orange-900;
-      background-color: $white;
-    }
-
-    &:active .user-nav__num {
-      color: $white;
-      background-color: $orange-900;
-    }
-  }
-
-  &__link-img {
-    fill: transparent;
-    stroke: $darkBlue-900;
-    width: 19px;
-    height: 19px;
-  }
-
-  &__item {
-    &:not(:last-child) {
-      margin-right: 10px;
-    }
-  }
-
-  &__num {
-    position: absolute;
-    padding: 0 4px;
-    border-radius: 50%;
-    color: $white;
-    background-color: $orange-900;
-    top: 5px;
-    left: 22px;
-    font-size: 10px;
-    line-height: 1.4;
-  }
-}
-
-.delivery {
-  &__header {
-    font-size: 66px;
-    font-weight: 500;
-    margin-top: 10px;
-    text-transform: uppercase;
-  }
-
-  &__time {
-    display: block;
-    color: $orange-900;
-  }
-
-  &__description {
-    @include line-clamp(3);
-    font-size: 20px;
-    line-height: 1.5;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-weight: 400;
-  }
-
-  &__button {
-    margin-right: 34px;
-  }
-
-  &__promise {
-    margin-top: -30px;
-    margin-left: -5px;
-    max-width: 450px;
-  }
-
-  &__img {
-    width: 560px;
-    height: 660px;
   }
 }
 

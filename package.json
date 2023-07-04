@@ -1,12 +1,12 @@
 {
-  "version": "14.3.0",
+  "version": "14.4.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"14.3.0 html split\""
+    "gitHub": "npm run deploy -- -m \"14.4.0 delivery section\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",

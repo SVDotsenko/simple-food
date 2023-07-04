@@ -72,6 +72,19 @@ body {
     background-color: rgba($orange-800, 0.1);
     box-shadow: none;
   }
+
+  @include mq('desktop') {
+    font-size: 17px;
+  }
+  @include mq('tablet-2') {
+    font-size: 16px;
+  }
+  @include mq('tablet') {
+    font-size: 14px;
+  }
+  @include mq('phone') {
+    font-size: 14px;
+  }
 }
 
 .animation {
@@ -98,6 +111,18 @@ body {
   text-decoration-line: underline;
   font-size: 20px;
   line-height: 1.5;
+  @include mq('desktop') {
+    font-size: 19px;
+  }
+  @include mq('tablet-2') {
+    font-size: 18px;
+  }
+  @include mq('tablet') {
+    font-size: 17px;
+  }
+  @include mq('phone') {
+    font-size: 16px;
+  }
 
   &:focus {
     text-decoration-line: none;
