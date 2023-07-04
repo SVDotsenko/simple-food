@@ -123,9 +123,9 @@ function watching() {
 
 function updateVersion() {
   const version = JSON.parse(fs.readFileSync('package.json', 'utf8')).version;
-  return src('app/index.html')
+  return src('app/html/components/_footer.html')
     .pipe(injectString.replace(/(\d+)\.(\d+)\.(\d+)/, version))
-    .pipe(dest('app'));
+    .pipe(dest('app/html/components'));
 }
 
 exports.htmlInclude = htmlInclude;

@@ -4,3 +4,4 @@ node_modules
 package-lock.json
 app/css
 app/js/*.min.js
+app/index.html
