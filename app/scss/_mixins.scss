@@ -1,3 +1,5 @@
+@import 'vars';
+
 @mixin font-face($font-family, $url, $weight, $font-style) {
   @font-face {
     font-family: $font-family;
@@ -32,5 +34,17 @@
     display: -webkit-box;
     -webkit-line-clamp: $lines;
     -webkit-box-orient: vertical;
+  }
+}
+
+@mixin mq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
   }
 }

@@ -9,6 +9,12 @@ $orange-900: #ff6838;
 $darkBlue-900: #363853;
 $dark: #31352b;
 $black: #000;
+$breakpoints: (
+        'phone': 560px,
+        'tablet': 768px,
+        'tablet-2': 992px,
+        'desktop': 1230px
+);
 
 %rubikLight-300 {
   font-family: 'Rubik', sans-serif;
