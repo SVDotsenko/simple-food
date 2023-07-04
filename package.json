@@ -1,12 +1,12 @@
 {
-  "version": "13.9.0",
+  "version": "14.2.0",
   "name": "simple-food",
   "homepage": "https://svdotsenko.github.io/simple-food",
   "scripts": {
     "start": "gulp",
     "predeploy": "gulp build",
     "deploy": "gh-pages -d dist",
-    "gitHub": "npm run deploy -- -m \"13.9.0 refactoring after code review\""
+    "gitHub": "npm run deploy -- -m \"14.2.0 gulp-file-include\""
   },
   "devDependencies": {
     "browser-sync": "^2.29.3",
@@ -16,6 +16,7 @@
     "gulp-autoprefixer": "^8.0.0",
     "gulp-cheerio": "^1.0.0",
     "gulp-concat": "^2.6.1",
+    "gulp-file-include": "^2.3.0",
     "gulp-imagemin": "^7.1.0",
     "gulp-inject-string": "^1.1.2",
     "gulp-replace": "^1.1.4",

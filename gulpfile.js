@@ -10,6 +10,7 @@ const del = require('del');
 const svgSprite = require('gulp-svg-sprite');
 const cheerio = require('gulp-cheerio');
 const replace = require('gulp-replace');
+const fileInclude = require('gulp-file-include');
 const fs = require('fs');
 
 function browsersync() {
@@ -19,6 +20,16 @@ function browsersync() {
     },
     notify: false
   });
+}
+
+function htmlInclude() {
+  return src(['app/html/*.html'])
+    .pipe(fileInclude({
+      prefix: '@',
+      basepath: '@file',
+    }))
+    .pipe(dest('app'))
+    .pipe(browserSync.stream());
 }
 
 function styles() {
@@ -104,6 +115,7 @@ function cleanDist() {
 
 function watching() {
   watch(['app/images/icons/*.svg'], svgSprites);
+  watch(['app/html/**/*.html'], htmlInclude);
   watch(['app/scss/**/*.scss'], styles);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/**/*.html']).on('change', browserSync.reload);
@@ -116,6 +128,7 @@ function updateVersion() {
     .pipe(dest('app'));
 }
 
+exports.htmlInclude = htmlInclude;
 exports.styles = styles;
 exports.scripts = scripts;
 exports.browsersync = browsersync;
@@ -125,4 +138,4 @@ exports.cleanDist = cleanDist;
 exports.updateVersion = updateVersion;
 exports.svgSprites = svgSprites;
 exports.build = series(cleanDist, images, updateVersion, build);
-exports.default = parallel(svgSprites, styles, scripts, browsersync, watching);
+exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);
