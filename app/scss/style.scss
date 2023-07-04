@@ -46,10 +46,10 @@
       color: $orange-900;
     }
   }
+}
 
-  &-right {
-    display: flex;
-  }
+.menu-right {
+  display: flex;
 }
 
 .user-nav {
@@ -65,8 +65,8 @@
     transition: all 0.3s;
 
     &:focus {
-      background: rgba(255, 122, 80, 0.10);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.70);
+      background-color: rgba($orange-800, 0.1);
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
     }
 
     &:hover {
@@ -78,15 +78,15 @@
       box-shadow: none;
     }
 
-    &:focus &-img {
+    &:focus .user-nav__link-img {
       stroke: $darkBlue-900;
     }
 
-    &:hover &-img {
+    &:hover .user-nav__link-img {
       stroke: $white;
     }
 
-    &:active &-img {
+    &:active .user-nav__link-img {
       stroke: $darkBlue-900;
     }
 
@@ -99,13 +99,13 @@
       color: $white;
       background-color: $orange-900;
     }
+  }
 
-    &-img {
-      fill: transparent;
-      stroke: $darkBlue-900;
-      width: 19px;
-      height: 19px;
-    }
+  &__link-img {
+    fill: transparent;
+    stroke: $darkBlue-900;
+    width: 19px;
+    height: 19px;
   }
 
   &__item {
@@ -116,7 +116,7 @@
 
   &__num {
     position: absolute;
-    padding: 0 5px;
+    padding: 0 4px;
     border-radius: 50%;
     color: $white;
     background-color: $orange-900;
@@ -141,6 +141,7 @@
   }
 
   &__description {
+    @include line-clamp(3);
     font-size: 20px;
     line-height: 1.5;
     margin-top: 30px;
@@ -169,10 +170,10 @@
 
   &__buttons {
     display: flex;
-    justify-content: space-between;
     margin-bottom: 40px;
-    padding-right: 55px;
     gap: 20px;
+    overflow-x: auto;
+    padding: 2px 0 2px 2px;
   }
 
   &__content {
@@ -188,11 +189,13 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  white-space: nowrap;
   color: $darkBlue-900;
   background-color: $white;
   box-shadow: 0 0 0 1px $silver-200;
   border-radius: 5px;
   padding: 13px 30px 13px 30px;
+  transition: all 0.3s;
 
   &:focus {
     background-color: $white;
@@ -200,33 +203,32 @@
   }
 
   &:hover {
-    background-color: rgba(255, 122, 80, 0.1);
+    background-color: rgba($orange-800, 0.1);
     box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
     color: $orange-900;
+
+    svg {
+      fill: $orange-900;
+    }
   }
 
   &:active {
     background-color: $white;
     box-shadow: inset 0 -5px 12px rgba($orange-900, 0.2);
     color: $dark;
-  }
 
-  &:hover:not(.mixitup-control-active) &__img {
-    stroke: $orange-900;
-  }
-
-  &:active:not(.mixitup-control-active) &__img {
-    stroke: $dark;
-    fill: $dark;
+    svg {
+      fill: $dark;
+    }
   }
 
   &.mixitup-control-active {
     color: $white;
     background-color: $orange-900;
-  }
 
-  &.mixitup-control-active &__img {
-    fill: $white;
+    svg {
+      fill: $white;
+    }
   }
 
   &__img {
@@ -242,6 +244,7 @@
   padding: 20px 15px;
   border-radius: 5px;
   height: 100%;
+  transition: box-shadow 0.3s;
 
   &:hover {
     box-shadow: 0 0 0 1px $orange-900;
@@ -252,6 +255,7 @@
   }
 
   &__name {
+    @include line-clamp(2);
     margin-bottom: 15px;
   }
 
@@ -261,7 +265,6 @@
   }
 
   &__button {
-    @extend .button;
     font-size: 14px;
     padding: 7px 16px;
   }
@@ -276,8 +279,9 @@
   }
 
   &__img {
-    width: 440px;
     height: 585px;
+    width: 100%;
+    max-width: 440px;
   }
 
   &__text {
@@ -285,6 +289,7 @@
   }
 
   &__promise {
+    @include line-clamp(3);
     font-size: 20px;
     line-height: 150%;
     margin-bottom: 30px;
@@ -296,35 +301,35 @@
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 1.5;
+  }
 
-    &-item {
-      padding-left: 64px;
-      position: relative;
+  &__advantages-item {
+    padding-left: 64px;
+    position: relative;
 
+    &::before {
+      @include pseudo_image_position;
+      top: 0;
+      left: 0;
+      width: 34px;
+      height: 34px;
+    }
+
+    &--quick {
       &::before {
-        @include pseudo_image_position;
-        top: 0;
-        left: 0;
-        width: 34px;
-        height: 34px;
+        background-image: url('../images/icons/stopwatch.svg');
       }
+    }
 
-      &--quick {
-        &::before {
-          background-image: url('../images/icons/stopwatch.svg');
-        }
+    &--polite {
+      &::before {
+        background-image: url('../images/icons/delivery.svg');
       }
+    }
 
-      &--polite {
-        &::before {
-          background-image: url('../images/icons/delivery.svg');
-        }
-      }
-
-      &--outlets {
-        &::before {
-          background-image: url('../images/icons/shop.svg');
-        }
+    &--outlets {
+      &::before {
+        background-image: url('../images/icons/shop.svg');
       }
     }
   }
@@ -336,6 +341,10 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, minmax(419px, auto));
     grid-gap: 30px;
+  }
+
+  &__img {
+    border-radius: 10px 10px 0 0;
   }
 }
 
@@ -351,6 +360,7 @@
   }
 
   &__text {
+    @include line-clamp(3);
     font-size: 20px;
     line-height: 1.5;
     opacity: 0.9;
@@ -358,7 +368,8 @@
   }
 
   &__img {
-    width: 570px;
+    max-width: 570px;
+    width: 100%;
     height: 380px;
   }
 
@@ -370,74 +381,410 @@
 
 .footer {
   background-color: $silver-100;
+}
 
-  &-top {
-    padding-bottom: 53px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 70px;
+.footer-top {
+  padding-bottom: 53px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 70px;
 
-    &__list {
-      display: grid;
-      grid-auto-flow: column;
-      grid-template-rows: repeat(4, 1fr);
-      grid-column-gap: 74px;
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 74px;
+  }
+
+  &__link,
+  &__contact {
+    display: block;
+  }
+
+  &__link {
+    width: max-content;
+  }
+
+  &__contact {
+    padding-bottom: 15px;
+    padding-left: 35px;
+    font-size: 16px;
+    line-height: 2;
+    position: relative;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 3px;
+      left: 0;
+      width: 24px;
+      height: 24px;
     }
 
-    &__link,
-    &__contact {
-      display: block;
-    }
-
-    &__link {
-      width: max-content;
-    }
-
-    &__contact {
-      padding-bottom: 15px;
-      padding-left: 35px;
-      font-size: 16px;
-      line-height: 2;
-      position: relative;
-
+    &--address {
       &::before {
-        @include pseudo_image_position;
-        top: 3px;
-        left: 0;
-        width: 24px;
-        height: 24px;
+        background-image: url('../images/icons/address.svg');
       }
+    }
 
-      &--address {
-        &::before {
-          background-image: url('../images/icons/address.svg');
-        }
+    &--phone {
+      &::before {
+        background-image: url('../images/icons/phone.svg');
       }
+    }
 
-      &--phone {
-        &::before {
-          background-image: url('../images/icons/phone.svg');
-        }
-      }
-
-      &--email {
-        &::before {
-          background-image: url('../images/icons/email.svg');
-        }
+    &--email {
+      &::before {
+        background-image: url('../images/icons/email.svg');
       }
     }
   }
+}
 
-  &-bottom {
-    border-top: 1px solid $silver-200;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 14px;
+.footer-bottom {
+  border-top: 1px solid $silver-200;
+  text-align: center;
+  padding: 30px 0;
+  font-size: 14px;
 
-    &__version {
-      position: absolute;
-      right: 0;
+  &__version {
+    position: absolute;
+    right: 0;
+    color: $gray;
+  }
+}
+
+.form {
+  &__input {
+    margin-top: 20px;
+    padding: 13px;
+    border: 1px solid $gray;
+    border-radius: 5px;
+    margin-bottom: 12px;
+    width: 200px;
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-size: 14px;
       color: $gray;
+      transition: all 0.3s;
     }
+
+    &:focus {
+      background-color: $white;
+      color: $gray;
+      box-shadow: 0 0 0 2px $orange-900;
+      border-color: transparent;
+    }
+
+    &:hover::placeholder {
+      color: $darkBlue-900;
+      opacity: 0.9;
+    }
+  }
+
+  &__button {
+    width: 200px;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+    &:focus &-img,
+    &:hover &-img {
+      fill: $orange-900;
+    }
+
+    &-img {
+      width: 17px;
+      height: 16px;
+      fill: $white;
+    }
+  }
+}
+
+.social-list {
+  display: flex;
+  gap: 13px;
+
+  &__img {
+    width: 39px;
+    height: 39px;
+    stroke: $dark;
+    fill: $silver-200;
+    border-radius: 50%;
+    transition: all 0.3s;
+
+    &:focus {
+      fill: $silver-200;
+      stroke: $orange-900;
+    }
+
+    &:hover {
+      fill: $orange-900;
+      stroke: $white;
+    }
+
+    &:active {
+      fill: $silver-300;
+      stroke: $orange-900;
+    }
+  }
+}
+
+.restaurant-card {
+  border-radius: 10px;
+  background: $white;
+  box-shadow: 0 3px 3px 0 rgba($black, 0.1);
+  height: 100%;
+  transition: box-shadow 0.3s;
+
+  &:hover {
+    box-shadow: 0 3px 15px 0 rgba($orange-900, 0.5);
+  }
+
+  &__name {
+    @include line-clamp(1);
+    color: $dark;
+    font-size: 24px;
+    line-height: 1.3;
+    margin: 15px 0 20px 20px;
+    font-weight: 400;
+  }
+
+  &__timetable {
+    @extend .df-sb-aic;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__timetable-time {
+    color: $dark;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.7;
+    opacity: 0.9;
+    position: relative;
+    padding-left: 30px;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 5px;
+      left: 0;
+      width: 22px;
+      height: 22px;
+      background-image: url('../images/icons/watch.svg');
+    }
+  }
+
+  &__timetable-link {
+    display: grid;
+    place-items: center;
+    padding-left: 7px;
+    padding-right: 7px;
+    background-color: $orange-900;
+    border-radius: 20px;
+    width: 79px;
+    height: 33px;
+    transition: background-color 0.3s, box-shadow 0.3s, justify-items 0.3s;
+
+    &:focus {
+      background-color: #FFF2ED;
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    }
+
+    &:hover {
+      justify-items: end;
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 0 0 0 2px rgba($orange-900, 0.7);
+    }
+
+    &:active {
+      background-color: #FFF2ED;
+      justify-items: center;
+      box-shadow: none;
+    }
+
+    &:focus .restaurant-card__timetable-img,
+    &:hover .restaurant-card__timetable-img,
+    &:active .restaurant-card__timetable-img {
+      fill: $orange-900;
+    }
+  }
+
+  &__timetable-img {
+    width: 24px;
+    height: 24px;
+    fill: $white;
+    transition: fill 0.3s;
+  }
+}
+
+.slider {
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+  }
+
+  &__text {
+    max-width: 643px;
+  }
+
+  &__customer-img {
+    border-radius: 50%;
+  }
+
+  &__customer-opinion {
+    position: relative;
+  }
+
+  &__customer-text {
+    @include line-clamp(5);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 30px;
+    font-weight: 400;
+    padding-left: 32px;
+    padding-right: 50px;
+
+    &::before {
+      @include pseudo_image_position;
+      top: 0;
+      left: -9px;
+      width: 24px;
+      height: 19px;
+      background-image: url('../images/icons/quote.svg');
+    }
+
+    &::after {
+      @include pseudo_image_position;
+      bottom: 0;
+      right: 1px;
+      width: 24px;
+      height: 19px;
+      background-image: url('../images/icons/quote.svg');
+      transform: scaleX(-1);
+    }
+  }
+
+  &__customer-name {
+    color: $orange-900;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 15px;
+    padding-left: 32px;
+  }
+
+  &__customer-description {
+    font-size: 14px;
+    line-height: 1.3;
+    padding-left: 32px;
+  }
+
+  & .slick-dots {
+    position: absolute;
+    top: 348px;
+    left: 547px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  & .slick-dots button {
+    font-size: 0;
+    padding: 0;
+    width: 15px;
+    height: 15px;
+    background-color: $gray;
+    border-radius: 50%;
+    outline: none;
+  }
+
+  & .slick-dots .slick-active button {
+    background-color: $orange-900;
+  }
+
+  & .slick-dots button:focus {
+    background-color: $gray;
+    border: 2px solid $orange-900;
+  }
+
+  & .slick-dots button:hover {
+    background-color: $silver-300;
+    border: 2px solid $orange-700;
+  }
+
+  & .slick-dots button:active {
+    background-color: $orange-700;
+    border: transparent;
+  }
+
+  &__arrow {
+    border-radius: 50%;
+    border: 3px solid $gray;
+    cursor: pointer;
+    outline: transparent;
+    transition: background-color 0.3s ease-in-out;
+    width: 34px;
+    height: 34px;
+
+    &:focus:not(.slick-disabled) {
+      box-shadow: 0 0 0 2px $orange-900;
+    }
+
+    &:hover {
+      background-color: $silver-300;
+      border-color: $orange-700;
+    }
+
+    &:active {
+      border-color: transparent;
+      box-shadow: none;
+    }
+
+    &:hover &-img {
+      fill: $orange-700;
+    }
+
+    &:active &-img {
+      fill: $orange-800;
+    }
+  }
+
+  &__arrow-img {
+    width: 11px;
+    height: 19px;
+    fill: $gray;
+  }
+
+  &__arrow--prev {
+    left: 489px;
+    top: 348px;
+  }
+
+  &__arrow--next {
+    left: 676px;
+    top: 348px;
+    transform: rotate(180deg);
+  }
+
+  &__arrow--prev, &__arrow--next {
+    position: absolute;
+    bottom: -95px;
+    display: grid;
+    place-items: center;
+  }
+
+  & .slick-disabled {
+    border-color: $orange-900;
+  }
+
+  & .slick-disabled &__arrow-img {
+    fill: $orange-900;
   }
 }

@@ -2,6 +2,7 @@ $(() => {
   $('.slider').slick({
     arrows: true,
     dots: true,
+    infinite: false,
     prevArrow: '<button type="button" class="slider__arrow slider__arrow--prev">' +
       '<svg class="slider__arrow-img">' +
       '<use xlink:href="images/sprite.svg#arrow-left"></use>' +
