@@ -6,6 +6,7 @@
 @import 'components/header';
 @import 'page-catalog/delivery';
 @import 'page-catalog/popular-categories';
+@import 'page-catalog/stay-home';
 
 .logo {
   transition: box-shadow 0.5s, opacity 0.5s;
@@ -22,71 +23,6 @@
 
   &:active {
     opacity: 0.5;
-  }
-}
-
-.stay-home {
-  &__container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 120px;
-  }
-
-  &__img {
-    height: 585px;
-    width: 100%;
-    max-width: 440px;
-  }
-
-  &__text {
-    max-width: 470px;
-  }
-
-  &__promise {
-    @include line-clamp(3);
-    font-size: 20px;
-    line-height: 150%;
-    margin-bottom: 30px;
-  }
-
-  &__advantages {
-    display: grid;
-    grid-gap: 20px;
-    margin-bottom: 30px;
-    font-size: 24px;
-    line-height: 1.5;
-  }
-
-  &__advantages-item {
-    padding-left: 64px;
-    position: relative;
-
-    &::before {
-      @include pseudo_image_position;
-      top: 0;
-      left: 0;
-      width: 34px;
-      height: 34px;
-    }
-
-    &--quick {
-      &::before {
-        background-image: url('../images/icons/stopwatch.svg');
-      }
-    }
-
-    &--polite {
-      &::before {
-        background-image: url('../images/icons/delivery.svg');
-      }
-    }
-
-    &--outlets {
-      &::before {
-        background-image: url('../images/icons/shop.svg');
-      }
-    }
   }
 }
 
