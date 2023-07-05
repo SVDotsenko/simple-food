@@ -137,5 +137,5 @@ exports.images = images;
 exports.cleanDist = cleanDist;
 exports.updateVersion = updateVersion;
 exports.svgSprites = svgSprites;
-exports.build = series(cleanDist, images, updateVersion, build);
+exports.build = series(cleanDist, images, updateVersion, htmlInclude, build);
 exports.default = parallel(htmlInclude, svgSprites, styles, scripts, browsersync, watching);
