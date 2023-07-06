@@ -3,11 +3,7 @@
 
 .mobile-application {
   padding: 145px 0 120px 0;
-
-  &__container {
-    @extend .df-sb-aic;
-  }
-
+  
   &__description {
     margin-right: -100%;
     z-index: 1;
