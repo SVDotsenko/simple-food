@@ -26,6 +26,8 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(4, 40px); //тут не разобрался как вставить произвольное количество строк, если знаешь, расскажи на ревью
+    grid-auto-flow: column;
     grid-column-gap: 74px;
 
     @include mq('desktop') {
@@ -40,11 +42,12 @@
     }
     @include mq('tablet') {
       grid-template-columns: repeat(2, auto);
-      grid-column-gap: 150px;
+      grid-template-rows: repeat(6, 40px);
+      grid-column-gap: 100px;
     }
     @include mq('phone') {
       grid-template-columns: repeat(1, auto);
-
+      grid-template-rows: repeat(12, 40px);
     }
   }
 
