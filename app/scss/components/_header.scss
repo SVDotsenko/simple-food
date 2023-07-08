@@ -1,7 +1,27 @@
 @import '../vars';
+@import '../mixins';
 
 .header {
   padding-top: 60px;
+
+  & .logo__img {
+    @include mq('desktop') {
+      width: 179px;
+      height: 35px;
+    }
+    @include mq('tablet-2') {
+      width: 158px;
+      height: 31px;
+    }
+    @include mq('tablet') {
+      width: 136px;
+      height: 27px;
+    }
+    @include mq('phone') {
+      width: 115px;
+      height: 23px;
+    }
+  }
 }
 
 .menu {
@@ -11,11 +31,35 @@
     display: flex;
     align-items: center;
     margin-right: 52px;
+    @include mq('desktop') {
+      margin-right: 40px;
+    }
+    @include mq('tablet-2') {
+      margin-right: 25px;
+    }
+    @include mq('tablet') {
+      margin-right: 10px;
+    }
+    @include mq('phone') {
+      display: none;
+    }
   }
 
   &__list-item {
     &:not(:last-child) {
       margin-right: 45px;
+      @include mq('desktop') {
+        margin-right: 33px;
+      }
+      @include mq('tablet-2') {
+        margin-right: 22px;
+      }
+      @include mq('tablet') {
+        margin-right: 11px;
+      }
+      @include mq('phone') {
+        margin-right: 0;
+      }
     }
   }
 
@@ -26,12 +70,23 @@
   }
 }
 
+.burger-button {
+  display: none;
+  @include burger-button(40px, 25px, 2px);
+  @include mq('phone') {
+    display: block;
+  }
+}
+
 .menu-right {
   display: flex;
 }
 
 .user-nav {
   display: flex;
+  @include mq('phone') {
+    margin-right: 80px;
+  }
 
   &__link {
     position: relative;
@@ -89,6 +144,18 @@
   &__item {
     &:not(:last-child) {
       margin-right: 10px;
+      @include mq('desktop') {
+        margin-right: 7px;
+      }
+      @include mq('tablet-2') {
+        margin-right: 4px;
+      }
+      @include mq('tablet') {
+        margin-right: 1px;
+      }
+      @include mq('phone') {
+        margin-right: 33px;
+      }
     }
   }
 

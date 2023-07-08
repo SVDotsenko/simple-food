@@ -1,3 +1,5 @@
+import burger from "./burger.js";
+
 $(() => {
   $('.slider').slick({
     arrows: true,
@@ -31,3 +33,4 @@ $(() => {
 });
 
 mixitup('.popular-categories__content');
+burger();

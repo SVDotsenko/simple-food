@@ -1,14 +1,13 @@
 @import '../vars';
 @import '../mixins';
 
-.slider {
-  //todo разделить
-  //li:nth-child(n+5) {
-  //  display: none;
-  //  @include mq('phone') {
-  //    display: inline;
-  //  }
-  //}
+.customer-feedback .slider {
+  li:nth-child(n+5) {
+    display: none;
+    @include mq('phone') {
+      display: inline;
+    }
+  }
 
   &__item {
     display: flex;
