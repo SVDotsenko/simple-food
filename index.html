@@ -24,18 +24,20 @@
         </a>
 
         <div class="menu-right">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="animation menu__list-link menu__list-link--active" href="#">Главная</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="animation menu__list-link" href="#popular-categories">Блюда</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="animation menu__list-link" href="#contact">Контакты</a>
-            </li>
-          </ul>
+          <div class="menu-list-show">
+            <ul class="list">
+  <li class="list__item">
+    <a class="animation list__link list__link--active" href="#">Главная</a>
+  </li>
+  <li class="list__item">
+    <a class="animation list__link" href="#popular-categories">Блюда</a>
+  </li>
+  <li class="list__item">
+    <a class="animation list__link" href="#contact">Контакты</a>
+  </li>
+</ul>
 
+          </div>
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">
@@ -65,6 +67,72 @@
       </nav>
     </div>
   </header>
+<aside class="mobile-menu">
+  <header class="mobile-menu__header">
+    <a class="logo" href="#">
+      <img class="logo__img picture" src="images/icons/logo.svg" alt="logo" width="200" height="39">
+    </a>
+    <button class="mobile-menu__button" type="button">
+      <svg class="mobile-menu__img">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </header>
+  <hr class="mobile-menu__hr">
+  <ul class="list">
+  <li class="list__item">
+    <a class="animation list__link list__link--active" href="#">Главная</a>
+  </li>
+  <li class="list__item">
+    <a class="animation list__link" href="#popular-categories">Блюда</a>
+  </li>
+  <li class="list__item">
+    <a class="animation list__link" href="#contact">Контакты</a>
+  </li>
+</ul>
+
+  <hr class="mobile-menu__hr mb15">
+  <ul class="address">
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--address" href="#">ул. Т.Г.Шевченко, 1</a>
+  </li>
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--phone"
+      href="tel:+380501112233">380501112233</a>
+  </li>
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--email"
+      href="mailto:support@sfood.com">support@sfood.com</a>
+  </li>
+</ul>
+
+<ul class="social-list">
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">facebook</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">twitter</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">instagram</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
+</aside>
 
 <main class="main">
   <section class="delivery section">
@@ -79,7 +147,7 @@
         Не уложимся в срок - доставка за наш счёт
       </p>
       <a class="delivery__button button" href="#">Заказать</a>
-      <a class="animation hyperlink" href="#">Подробнее</a>
+      <a class="animation hyperlink delivery__hyperlink" href="#">Подробнее</a>
     </div>
     <div class="delivery__img picture" style="background-image: url('images/scooter-guy.png')">
       <span class="sr-only">реклама доставки еды</span>
@@ -245,7 +313,7 @@
         <li class="stay-home__advantages-item stay-home__advantages-item--polite">Вежливые курьеры</li>
         <li class="stay-home__advantages-item stay-home__advantages-item--outlets">Более 500 заведений</li>
       </ul>
-      <a class="button" href="#">Подробнее</a>
+      <a class="button stay-home__button" href="#">Подробнее</a>
     </div>
   </div>
 </section>
@@ -590,45 +658,45 @@
 
       <div class="footer-top__item">
         <ul class="address">
-          <li class="address__item">
-            <a class="animation footer-top__contact footer-top__contact--address" href="#">ул. Т.Г.Шевченко, 1</a>
-          </li>
-          <li class="address__item">
-            <a class="animation footer-top__contact footer-top__contact--phone"
-              href="tel:+380501112233">380501112233</a>
-          </li>
-          <li class="address__item">
-            <a class="animation footer-top__contact footer-top__contact--email"
-              href="mailto:support@sfood.com">support@sfood.com</a>
-          </li>
-        </ul>
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--address" href="#">ул. Т.Г.Шевченко, 1</a>
+  </li>
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--phone"
+      href="tel:+380501112233">380501112233</a>
+  </li>
+  <li class="address__item">
+    <a class="animation footer-top__contact footer-top__contact--email"
+      href="mailto:support@sfood.com">support@sfood.com</a>
+  </li>
+</ul>
 
-        <ul class="social-list">
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" target="_blank">
-              <span class="sr-only">facebook</span>
-              <svg class="social-list__img">
-                <use xlink:href="images/sprite.svg#facebook"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" target="_blank">
-              <span class="sr-only">twitter</span>
-              <svg class="social-list__img">
-                <use xlink:href="images/sprite.svg#twitter"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social-list__item">
-            <a class="social-list__link" href="#" target="_blank">
-              <span class="sr-only">instagram</span>
-              <svg class="social-list__img">
-                <use xlink:href="images/sprite.svg#instagram"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
+<ul class="social-list">
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">facebook</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#facebook"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">twitter</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#twitter"></use>
+      </svg>
+    </a>
+  </li>
+  <li class="social-list__item">
+    <a class="social-list__link" href="#" target="_blank">
+      <span class="sr-only">instagram</span>
+      <svg class="social-list__img">
+        <use xlink:href="images/sprite.svg#instagram"></use>
+      </svg>
+    </a>
+  </li>
+</ul>
       </div>
 
     </div>
@@ -636,7 +704,7 @@
 
   <div class="footer-bottom">
     <span class="footer-bottom__copy">© 2022 Simple Food</span>
-    <span class="footer-bottom__version">14.11.0</span>
+    <span class="footer-bottom__version">14.12.0</span>
   </div>
 
 </footer>

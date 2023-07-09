@@ -1,0 +1,16 @@
+<aside class="mobile-menu">
+  <header class="mobile-menu__header">
+    <a class="logo" href="#">
+      <img class="logo__img picture" src="images/icons/logo.svg" alt="logo" width="200" height="39">
+    </a>
+    <button class="mobile-menu__button" type="button">
+      <svg class="mobile-menu__img">
+        <use xlink:href="images/sprite.svg#close"></use>
+      </svg>
+    </button>
+  </header>
+  <hr class="mobile-menu__hr">
+  @include('_menu-list.html')
+  <hr class="mobile-menu__hr mb15">
+  @include('_contacts.html')
+</aside>
