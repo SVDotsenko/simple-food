@@ -3,13 +3,20 @@
 
 .popular-categories {
   text-align: center;
+  @include mq('phone') {
+    margin-bottom: 50px;
+  }
 
   &__buttons {
     display: flex;
     margin-bottom: 40px;
-    gap: 20px;
     overflow-x: auto;
     padding: 2px 0 2px 2px;
+    margin-top: -5px;
+    gap: 20px;
+    @include mq('phone') {
+      gap: 15px;
+    }
   }
 
   &__content {
@@ -18,7 +25,7 @@
     margin-bottom: 60px;
     justify-content: space-between;
     grid-template-columns: repeat(auto-fill, 210px);
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(299px, auto);
     @include mq('desktop') {
       grid-row-gap: 25px;
       margin-bottom: 53px;
@@ -36,7 +43,7 @@
       grid-template-columns: repeat(2, minmax(170px, 210px));
       grid-column-gap: 5px;
       grid-row-gap: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 17px;
     }
   }
 }
@@ -63,6 +70,7 @@
   }
   @include mq('phone') {
     font-size: 14px;
+    padding: 12px 11px 12px 11px;
   }
 
   &:focus {
@@ -125,6 +133,9 @@
   border-radius: 5px;
   height: 100%;
   transition: box-shadow 0.3s;
+  @include mq('phone') {
+    padding-bottom: 34px;
+  }
 
   &:hover {
     box-shadow: 0 0 0 1px $orange-900;
@@ -137,15 +148,26 @@
   &__name {
     @include line-clamp(2);
     margin-bottom: 15px;
+    @include mq('phone') {
+      margin-bottom: 0;
+      margin-top: -10px;
+    }
   }
 
   &__price {
     font-weight: 500;
     line-height: 1.4;
+    @include mq('phone') {
+      margin-bottom: 0;
+      margin-top: 20px;
+    }
   }
 
-  &__button {
+  &__button.button {
     font-size: 14px;
     padding: 7px 16px;
+    @include mq('phone') {
+      padding: 6px 15px;
+    }
   }
 }

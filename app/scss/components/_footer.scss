@@ -21,6 +21,7 @@
   }
   @include mq('phone') {
     gap: 30px;
+    padding-bottom: 19px;
   }
 
   &__list {
@@ -30,9 +31,6 @@
     grid-auto-flow: column;
     grid-column-gap: 74px;
 
-    @include mq('desktop') {
-
-    }
     @include mq('tablet-2') {
       order: 1;
       flex-basis: 100%;
@@ -47,7 +45,7 @@
     }
     @include mq('phone') {
       grid-template-columns: repeat(1, auto);
-      grid-template-rows: repeat(12, 40px);
+      grid-template-rows: repeat(12, 43px);
     }
   }
 
@@ -123,6 +121,11 @@
     margin-bottom: 12px;
     width: 200px;
     transition: all 0.3s;
+    @include mq('phone') {
+      margin-top: 25px;
+      margin-bottom: 13px;
+      padding: 10px 0 11px 14px;
+    }
 
     &::placeholder {
       font-size: 14px;
@@ -150,6 +153,10 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
+    @include mq('phone') {
+      padding-top: 12px !important;
+      padding-bottom: 12px !important;
+    }
 
     &:focus &-img,
     &:hover &-img {
@@ -160,35 +167,6 @@
       width: 17px;
       height: 16px;
       fill: $white;
-    }
-  }
-}
-
-.social-list {
-  display: flex;
-  gap: 13px;
-
-  &__img {
-    width: 39px;
-    height: 39px;
-    stroke: $dark;
-    fill: $silver-200;
-    border-radius: 50%;
-    transition: all 0.3s;
-
-    &:focus {
-      fill: $silver-200;
-      stroke: $orange-900;
-    }
-
-    &:hover {
-      fill: $orange-900;
-      stroke: $white;
-    }
-
-    &:active {
-      fill: $silver-300;
-      stroke: $orange-900;
     }
   }
 }

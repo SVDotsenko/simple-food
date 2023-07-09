@@ -4,13 +4,16 @@
 @import 'global';
 @import 'mixins';
 @import 'components/header';
+@import 'components/menu-list';
+@import 'components/mobile-menu';
+@import 'components/footer';
+@import 'components/contacts';
 @import 'page-catalog/delivery';
 @import 'page-catalog/popular-categories';
 @import 'page-catalog/stay-home';
 @import 'page-catalog/best-restaurants';
 @import 'page-catalog/customer-feedback';
 @import 'page-catalog/mobile-application';
-@import 'components/footer';
 
 .logo {
   transition: box-shadow 0.5s, opacity 0.5s;
@@ -27,5 +30,20 @@
 
   &:active {
     opacity: 0.5;
+  }
+}
+
+.lock {
+  overflow: hidden;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
   }
 }

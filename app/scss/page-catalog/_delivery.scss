@@ -1,6 +1,10 @@
 @import '../mixins';
 
 .delivery {
+  @include mq('phone') {
+    margin-bottom: 30px;
+  }
+
   &__header {
     font-size: 66px;
     font-weight: 500;
@@ -28,7 +32,8 @@
   &__description {
     font-size: 20px;
     line-height: 1.5;
-    margin-top: 30px;
+    margin-top: 20px;
+    //todo проверить на дэсктопе margin-top: 30px;
     margin-bottom: 30px;
     font-weight: 400;
     @include line-clamp(3);
@@ -52,10 +57,25 @@
 
   &__promise {
     margin-top: -30px;
-    margin-left: -5px;
+    //todo проверить на дэсктопе margin-left: -5px;
     max-width: 450px;
     margin-right: -70%;
     z-index: 1;
+  }
+
+  &__hyperlink {
+    @include mq('desktop') {
+      font-size: 19px !important; //без important не работает, хотя должно, объясни пж-та почему так
+    }
+    @include mq('tablet-2') {
+      font-size: 18px !important;
+    }
+    @include mq('tablet') {
+      font-size: 17px !important;
+    }
+    @include mq('phone') {
+      font-size: 16px !important;
+    }
   }
 
   &__img {

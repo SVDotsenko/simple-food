@@ -1,6 +1,10 @@
 @import '../mixins';
 
 .stay-home {
+  @include mq('phone') {
+    margin-bottom: 30px;
+  }
+
   &__img {
     max-width: 440px;
     height: 585px;
@@ -30,6 +34,9 @@
     max-width: 470px;
     margin-left: -100%;
     z-index: 1;
+    @include mq('phone') {
+      margin-top: -30px;
+    }
   }
 
   &__promise {
@@ -51,7 +58,7 @@
     }
     @include mq('phone') {
       font-size: 16px;
-      margin-bottom: 34px;
+      margin-bottom: 65px;
     }
   }
 
@@ -77,6 +84,9 @@
 
   &__advantages-item {
     padding-left: 64px;
+    @include mq('phone') {
+      padding-left: 44px;
+    }
     position: relative;
 
     &::before {
@@ -103,6 +113,12 @@
       &::before {
         background-image: url('../images/icons/shop.svg');
       }
+    }
+  }
+
+  &__button {
+    @include mq('phone') {
+      padding: 13px 34px !important;
     }
   }
 }

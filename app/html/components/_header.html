@@ -7,18 +7,9 @@
         </a>
 
         <div class="menu-right">
-          <ul class="menu__list">
-            <li class="menu__list-item">
-              <a class="animation menu__list-link menu__list-link--active" href="#">Главная</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="animation menu__list-link" href="#popular-categories">Блюда</a>
-            </li>
-            <li class="menu__list-item">
-              <a class="animation menu__list-link" href="#contact">Контакты</a>
-            </li>
-          </ul>
-
+          <div class="menu-list-show">
+            @include('_menu-list.html')
+          </div>
           <ul class="user-nav">
             <li class="user-nav__item">
               <a class="user-nav__link" href="#">

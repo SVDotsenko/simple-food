@@ -33,16 +33,16 @@
   &__text {
     max-width: 643px;
     @include mq('desktop') {
-      //todo тут прописать нужное значение
+      max-width: 565px;
     }
     @include mq('tablet-2') {
-      //todo тут прописать нужное значение
+      max-width: 486px;
     }
     @include mq('tablet') {
-      //todo тут прописать нужное значение
+      max-width: 400px;
     }
     @include mq('phone') {
-      max-width: 343px;
+      max-width: 330px;
     }
   }
 
@@ -106,6 +106,10 @@
       width: 24px;
       height: 19px;
       background-image: url('../images/icons/quote.svg');
+      @include mq('phone') {
+        top: -10px;
+        left: -2px;
+      }
     }
 
     &::after {
@@ -116,6 +120,10 @@
       height: 19px;
       background-image: url('../images/icons/quote.svg');
       transform: scaleX(-1);
+      @include mq('phone') {
+        bottom: 13px;
+        right: -1px;
+      }
     }
   }
 
@@ -153,14 +161,14 @@
   & .slick-dots {
     position: absolute;
     left: 50%;
-    transform: translateX(-50px);
+    transform: translateX(-83px);
     bottom: -95px;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
     @include mq('phone') {
-      top: -100px;
+      top: -125px;
     }
   }
 
@@ -236,7 +244,7 @@
     bottom: 0;
     transform: translateX(-100px);
     @include mq('phone') {
-      transform: translateX(-120px);
+      transform: translateX(-134px);
       z-index: 1;
     }
   }
@@ -256,7 +264,7 @@
     display: grid;
     place-items: center;
     @include mq('phone') {
-      top: 50px;
+      top: 33px;
     }
   }
 

@@ -3,7 +3,10 @@
 
 .mobile-application {
   padding: 145px 0 120px 0;
-  
+  @include mq('phone') {
+    padding: 41px 0 40px 0;
+  }
+
   &__description {
     margin-right: -100%;
     z-index: 1;

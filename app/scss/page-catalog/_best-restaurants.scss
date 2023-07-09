@@ -2,6 +2,10 @@
 @import '../mixins';
 
 .best-restaurants {
+  @include mq('phone') {
+    margin-bottom: 85px;
+  }
+
   &__items {
     display: grid;
     justify-content: space-evenly;
