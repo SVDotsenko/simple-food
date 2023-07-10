@@ -1,7 +1,7 @@
 mixitup('.popular-categories__content');
 
 $(() => {
-  $('.slider').slick({
+  $('.customer-feedback__slider:not(.slick-initialized)').slick({
     arrows: true,
     dots: true,
     infinite: false,

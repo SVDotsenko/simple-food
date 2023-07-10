@@ -52,36 +52,6 @@ body {
   }
 }
 
-.mb15-phone {
-  @include mq('phone') {
-    margin-bottom: 15px;
-  }
-}
-
-.mb30-phone {
-  @include mq('phone') {
-    margin-bottom: 30px;
-  }
-}
-
-.mb45-tablet {
-  @include mq('tablet') {
-    margin-bottom: 45px;
-  }
-}
-
-.mb45-tablet-2 {
-  @include mq('tablet-2') {
-    margin-bottom: 45px;
-  }
-}
-
-.mb60-desktop {
-  @include mq('desktop') {
-    margin-bottom: 60px;
-  }
-}
-
 .center {
   text-align: center;
 }
@@ -207,8 +177,4 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.mb15 {
-  margin-bottom: 15px;
 }

@@ -161,14 +161,16 @@
   & .slick-dots {
     position: absolute;
     left: 50%;
-    transform: translateX(-83px);
-    bottom: -95px;
+    transform: translateX(-52px);
+    bottom: -73px;
     list-style: none;
     display: flex;
     justify-content: center;
     gap: 15px;
     @include mq('phone') {
+      bottom: initial;
       top: -125px;
+      transform: translateX(-83px);
     }
   }
 
@@ -242,7 +244,7 @@
   &__arrow--prev {
     left: 50%;
     bottom: 0;
-    transform: translateX(-100px);
+    transform: translateX(-109px);
     @include mq('phone') {
       transform: translateX(-134px);
       z-index: 1;
@@ -252,7 +254,7 @@
   &__arrow--next {
     left: 50%;
     bottom: 0;
-    transform: translateX(10px) rotate(180deg);
+    transform: translateX(77px) rotate(180deg);
     @include mq('phone') {
       transform: translateX(100px) rotate(180deg);
     }
@@ -260,7 +262,7 @@
 
   &__arrow--prev, &__arrow--next {
     position: absolute;
-    bottom: -95px;
+    bottom: -82px;
     display: grid;
     place-items: center;
     @include mq('phone') {
